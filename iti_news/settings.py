@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 """
 
 import os
+import django.contrib.auth
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -33,7 +34,13 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [	
     'post_app',
     'ckeditor',
-    'ckeditor_uploader',		
+    'ckeditor_uploader',
+
+    'threadedcomments',
+    'django_comments',
+    'django.contrib.sites',		
+    
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -54,6 +61,8 @@ MIDDLEWARE_CLASSES = [
 ]
 
 ROOT_URLCONF = 'iti_news.urls'
+COMMENTS_APP = 'threadedcomments'
+SITE_ID = 1
 
 TEMPLATES = [
     {

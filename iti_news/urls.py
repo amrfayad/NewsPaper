@@ -15,11 +15,15 @@ Including another URLconf
 """
 from django.conf.urls import url , include
 from django.contrib import admin
+from post_app import views
 #####
 from django.conf import settings
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
 
+
+    url(r'^comments/', include('django_comments.urls')),
+    url(r'^index/(?P<post_id>[0-9]+)', views.index),
     url(r'^ckeditor/', include('ckeditor_uploader.urls')) #Added Uploader url
     ,url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {
             'document_root': settings.MEDIA_ROOT,
