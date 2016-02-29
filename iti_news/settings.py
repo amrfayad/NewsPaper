@@ -145,5 +145,9 @@ CKEDITOR_CONFIGS = {
 
 
 
+<<<<<<< HEAD
+MEDIA_ROOT='/home/ayaemahmoud/Desktop/PythonProject/NewsPaper'
+=======
 MEDIA_ROOT='/home/marwa/Desktop/NewsPaper/uploads'
+>>>>>>> 59635ab133655cc21a488cc0db062a73bfd6d0f6
 MEDIA_URL = '/media/'

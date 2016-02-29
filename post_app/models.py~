@@ -7,8 +7,6 @@ from ckeditor_uploader.fields import RichTextUploadingField
 class Section(models.Model):
     title = models.CharField(max_length=200)
     mainPicture = models.ImageField()
-
-
     def __str__(self):
         return self.title
 
