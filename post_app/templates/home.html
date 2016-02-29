@@ -1,0 +1,48 @@
+
+
+
+
+
+
+
+
+     {% block login %}
+          {% if request.user.is_authenticated %}
+        <a   href="#" >{{ request.user.username }}</a>
+
+
+              <a href="logout">logout </a>
+
+          {% else %}
+
+                <a  class="btn btn-success" href="login">Login</a>
+         {% endif %}
+
+
+
+     {% endblock %}
+
+
+
+
+
+{% block main_block %}
+<br>
+{% for blog in blogs %}
+    <div>
+    <div class="page-header">
+        <h3>{{ blog.title }}</h3>
+
+
+    </div>
+    {{ blog.blog_content }}
+    </div>
+    {% endfor %}
+
+       {% if  request.user  %}
+              <br>
+
+           {{ request.session.user }}
+         {% endif %}
+
+{% endblock %}

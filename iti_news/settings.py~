@@ -91,7 +91,11 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'itinews',
 	'USER':'root',
+<<<<<<< HEAD
 	'PASSWORD':'iti'
+=======
+	'PASSWORD':'mulan'
+>>>>>>> 59635ab133655cc21a488cc0db062a73bfd6d0f6
     }
 }
 
