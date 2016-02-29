@@ -89,9 +89,9 @@ WSGI_APPLICATION = 'iti_news.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'iti_news',
+        'NAME': 'itinews',
 	'USER':'root',
-	'PASSWORD':'root'
+	'PASSWORD':'iti'
     }
 }
 

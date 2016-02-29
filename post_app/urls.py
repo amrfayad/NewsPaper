@@ -1,4 +1,4 @@
-"""iti_news URL Configuration
+"""first URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.9/topics/http/urls/
@@ -13,21 +13,11 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url , include
-from django.contrib import admin
-from post_app import views
-#####
-from django.conf import settings
+from django.conf.urls import url,include
+from . import views
+
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^posts/', include('post_app.urls')),
-
-    url(r'^comments/', include('django_comments.urls')),
-    url(r'^index/(?P<post_id>[0-9]+)', views.index),
-    url(r'^ckeditor/', include('ckeditor_uploader.urls')) #Added Uploader url
-    ,url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {
-            'document_root': settings.MEDIA_ROOT,
-        })
-
-
+    url(r'^sections$', views.sections),
+    url(r'^sections/(?P<section_name>[a-z]+)', views.post),
+    
 ]

@@ -1,0 +1,12 @@
+<html>
+	<body>
+	<table width="100%" border="1">
+	
+		{% for q in sections %}
+	<tr>
+			<td><a href="sections/{{q.title}}">{{ q.title }}</a></td>
+	</tr>
+		{% endfor %}
+	</table>
+	</body>
+</html>
