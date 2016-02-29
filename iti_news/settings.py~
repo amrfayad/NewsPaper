@@ -38,7 +38,9 @@ INSTALLED_APPS = [
 
     'threadedcomments',
     'django_comments',
-			
+    'django.contrib.sites',		
+    
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -59,6 +61,8 @@ MIDDLEWARE_CLASSES = [
 ]
 
 ROOT_URLCONF = 'iti_news.urls'
+COMMENTS_APP = 'threadedcomments'
+SITE_ID = 1
 
 TEMPLATES = [
     {
@@ -87,7 +91,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'iti_news',
 	'USER':'root',
-	'PASSWORD':'root'
+	'PASSWORD':'mulan'
     }
 }
 
