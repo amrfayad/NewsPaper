@@ -89,7 +89,7 @@ WSGI_APPLICATION = 'iti_news.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'itinews',
+        'NAME': 'iti_news',
 	'USER':'root',
 	'PASSWORD':'iti'
     }
@@ -145,5 +145,5 @@ CKEDITOR_CONFIGS = {
 
 
 
-MEDIA_ROOT='/media/engamrezat/Matrials/iti_news/uploads'
+MEDIA_ROOT='/home/ayaemahmoud/Desktop/PythonProject/NewsPaper'
 MEDIA_URL = '/media/'
