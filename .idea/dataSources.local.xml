@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Django default" uuid="cdf5141c-1c6b-40da-aa4d-e2bda465e11b">
+      <user-name>root</user-name>
+      <user-password>dfd8dfc5dfc5dfde</user-password>
+      <schema-pattern>iti_news.*</schema-pattern>
+      <default-schemas>iti_news.*</default-schemas>
+    </data-source>
+  </component>
+</project>

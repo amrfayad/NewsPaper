@@ -18,14 +18,11 @@ from django.contrib.auth import views as auth
 from . import views
 
 urlpatterns = [
-<<<<<<< HEAD
-    #url(r'^sections$', views.sections),
-    url(r'^sections/(?P<section_name>[A-Za-z]+)', views.post),
+
+	url(r'^sections/(?P<section_name>[A-Za-z]+)', views.post),
     url(r'^sections/(?P<post_id>[0-9]+)', views.showpost),
 
-=======
     url(r'^sections$', views.sections),
-    url(r'^sections/(?P<section_name>[a-z]+)', views.post),
     url(r'^register/$',views.register),
      url(r'^home',views.home),
 
@@ -33,8 +30,6 @@ urlpatterns = [
     url(r'^login$', auth.login), #You Must Override registration templates
 
     url(r'^logout$',views.logout_page),
-    
->>>>>>> 09e252fd8a15d2b54b070e1f1dbb0d8589b34d37
     url(r'^page$', views.pagination),
   
 ]

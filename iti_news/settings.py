@@ -88,10 +88,10 @@ WSGI_APPLICATION = 'iti_news.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'iti_news',
+    'ENGINE': 'django.db.backends.mysql',
+    'NAME': 'iti_news',
 	'USER':'root',
-	'PASSWORD':'iti'
+	'PASSWORD':'root'
     }
 }
 
@@ -142,6 +142,6 @@ CKEDITOR_CONFIGS = {
     },
 }
 
-MEDIA_ROOT='/home/ayaemahmoud/Desktop/PythonProject/NewsPaper'
+MEDIA_ROOT='/media/engamrezat/Matrials/aya/uploads'
 
 MEDIA_URL = '/media/'
