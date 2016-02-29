@@ -19,8 +19,13 @@ from post_app import views
 #####
 from django.conf import settings
 urlpatterns = [
+
+
+    
     url(r'^admin/', admin.site.urls),
     url(r'^posts/', include('post_app.urls')),
+    url(r'^$', views.mainview),
+
 
     url(r'^comments/', include('django_comments.urls')),
     url(r'^index/(?P<post_id>[0-9]+)', views.index),
@@ -28,6 +33,7 @@ urlpatterns = [
     ,url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {
             'document_root': settings.MEDIA_ROOT,
         })
+     
 
 
 ]
