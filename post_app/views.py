@@ -2,21 +2,21 @@ from django.shortcuts import render
 from django.contrib.auth import authenticate,login , logout
 from django.http import HttpResponse,HttpResponseRedirect
 from .models import Section,Post,Tag
-<<<<<<< HEAD
+
 from post_app.forms import RegistrationForm
 from django.contrib.auth.models import User
 from django.views.decorators.csrf import csrf_protect
-=======
+
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 from django.shortcuts import render_to_response
->>>>>>> 82e97c8c883c3290211181afd7ce7b20d90266da
+
 # Create your views here.
 def sections (request):
 	all_section= Section.objects.all()
 	context={'sections':all_section}
 	print context
-	return render(request,'post_app/sections.html',context)
+	return render(request,'MyDesign.html',context)
 
 def post (request,section_name):
 	print section_name
@@ -35,15 +35,15 @@ def register(request):
             password=form.cleaned_data['password1'],
             email=form.cleaned_data['email']
             )
-            return render(request,'registration/success.html/')
+            return render(request,'MyDesign.html')
     else:
 
         form = RegistrationForm()
 
-    return render(request,'registration/register.html',{'form':form})
+    return render(request,'registration/Register.html',{'form':form})
 def logout_page(request):
     logout(request)
-    return HttpResponseRedirect('home')
+    return HttpResponseRedirect('MyDesign.html')
 def home (request):
 
     blogs = Post.objects.all()

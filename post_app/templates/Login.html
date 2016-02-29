@@ -55,11 +55,11 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="/posts/sections">Home</a></li>
+        <li class="active"><a href="#">Home</a></li>
  
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="/posts/register"><span class="glyphicon glyphicon-log-in"></span> Register</a></li>
+        <li><a href=""><span class="glyphicon glyphicon-log-in"></span> Register</a></li>
       </ul>
     </div>
   </div>
@@ -74,22 +74,19 @@
       <p><a href="#">Fashion</a></p>
     </div>
 <div>
-   {% if form.errors %}
-        <p>Your username and password didn't match. Please try again.</p>
-    {% endif %}
-    <form method="post" action="/posts/sections">{% csrf_token %}
+  
+  
+    <form method="post" action=".">{% csrf_token %}
         <table border="0">
-            {{ form }}
+          {{ form }}
         </table>
         <input type="submit" value="Login" />
         <input type="hidden" name="next" value="/home" />
-
     </form>
-    
+
 </div>
     </div>
   </div>
-</div>
 
 <footer class="container-fluid text-center">
         <p><a href="#">Back to top</a></p>
