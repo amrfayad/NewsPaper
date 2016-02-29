@@ -14,10 +14,18 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import url,include
+from django.contrib.auth import views as auth
 from . import views
 
 urlpatterns = [
     url(r'^sections$', views.sections),
     url(r'^sections/(?P<section_name>[a-z]+)', views.post),
+    url(r'^register/$',views.register),
+     url(r'^home',views.home),
+
+
+    url(r'^login$', auth.login), #You Must Override registration templates
+
+    url(r'^logout$',views.logout_page),
     
 ]
